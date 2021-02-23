@@ -1,0 +1,11 @@
+<div class=wrapper>
+    <% @artists.each do |artist| %>
+    <div class=artist>
+      <%= link_to image_tag(artist.artist_image, class: "photo"), artist_works_path(artist.id) %>
+        <div class=name>
+        <p class=text_name><%= artist.artist_name %></p>
+      </div>  
+    </div>
+    <% end %>  
+</div>
+   

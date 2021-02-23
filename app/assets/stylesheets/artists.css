@@ -1,0 +1,38 @@
+ .wrapper {
+  width: 100vw;
+  padding: 0 50px;
+  overflow: hidden;
+  /* background-color: blue; */
+}   
+
+.artist {
+  width: Calc(100vw / 2 - 100px);
+  margin: 20px;
+  float: left;
+  background-color: green;
+}
+
+.photo {
+  width: Calc(100vw / 2 - 100px);
+  height: 300px;
+} 
+
+/* img {
+  width: Calc(100vw / 2 - 100px);
+  height: 300px;
+}  */
+
+.name {
+  width: Calc(100vw / 2 - 100px);
+  height: 50px;
+  background-color: black;
+}
+
+.text_name {
+  font: bold;
+  text-align: center;
+  color: white;
+}
+
+
+

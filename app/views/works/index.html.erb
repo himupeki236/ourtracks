@@ -1,0 +1,15 @@
+<div class=wrapper>
+    <% @works.each do |work| %>
+    <div class=work_box>
+      <%= link_to image_tag(work.image, class: "work_photo"), artist_work_reviews_path(@artist_id, work.id) %>
+      <div class=release_no_box>
+        <p class=release_no><%= work.release_no %></p>
+      </div>
+      <div class=work_name_box>
+        <p class=work_name><%= work.name %></p>
+      </div>  
+    </div>
+  <% end %>  
+  
+</div>
+   
