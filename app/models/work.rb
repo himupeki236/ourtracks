@@ -1,4 +1,4 @@
 class Work < ApplicationRecord
   belongs_to :artist
-  has_many :work
+  has_many :review
 end
