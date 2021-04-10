@@ -33,17 +33,20 @@
   padding-left: 10px;
 }
 
-.search-button {
+/* .search-button {
   width: 5vh;
   height: 6vh;
   border: 0;
   cursor: pointer;
   background-color: #3ccace;
   padding: 0px 5px 5px 5px;
-}
+} */
 
 .search-icon {
-  width: 100%;
+  width: 100px;
+  /* height: 6vh; */
+  height: 40px;
+  padding: 1px;
 }
 
 .nav {

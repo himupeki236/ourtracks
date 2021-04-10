@@ -9,6 +9,7 @@ class ReviewsController < ApplicationController
   end
 
   def new
+    login_check
     @artist = Artist.find(params[:artist_id])
     @work = Work.find(params[:work_id])
     @review = Review.new
@@ -38,5 +39,11 @@ class ReviewsController < ApplicationController
   #   # パラメータと一致するidのレコードを取得
   #   wwork_id = Work.find(params[:work_id])
   # end
+
+  def login_check
+    unless user_signed_in?
+      redirect_to new_user_session_path
+    end
+  end
 
 end
