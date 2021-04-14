@@ -4,10 +4,11 @@ class CreateReviews < ActiveRecord::Migration[6.0]
       t.string :title
       t.text :review
       t.string :artist_profile
-	    t.integer :artist_id
-	    t.integer :work_id
-	    t.integer :user_id
+	    t.references :artist,          null: false
+	    t.references :work,            null: false
+	    t.references :user,            null: false
       t.timestamps
+      
     end
   end
 end

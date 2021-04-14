@@ -12,7 +12,7 @@
 
   <div class="form-group">
     <div class='form-text-wrap'>
-      <label class="form-text">ユーザーネーム</label>
+      <label class="form-text">ユーザー名</label>
       <span class="indispensable">必須</span>
     </div>
     <%= f.text_area :nickname, class:"input-default", id:"nickname", placeholder:"例) 太郎" %>
@@ -43,6 +43,7 @@
     <div class='register-btn'>
       <%= f.submit "登録" ,class:"register-red-btn" %>
     </div>
+  </div>
 </div>
 <% end %>
 

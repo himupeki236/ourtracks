@@ -163,11 +163,15 @@
   <% @reviews.each do |review| %>
     <div class=review_box>
       <div class=review_title_box>
-      <%= review.title %>
+        <%= review.title %>
       </div>  
       <div class=review_text_box>
-      <%= review.review %>
+      <%=safe_join(review.review.split("\n"),tag(:br))%>
+      <%# review.review %>
       </div> 
+      <div class=review_user_box>
+        投稿者：<%= review.user.nickname %>
+      </div>  
     </div>
   <% end %>
   </div>
