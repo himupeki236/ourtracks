@@ -6,7 +6,7 @@ class Work < ApplicationRecord
   with_options presence: true do
     validates :photo
     validates :name, length: { maximum: 30 }
-    validates :release_no,  length: { maximum: 19 }
+    validates :release_no,  length: { maximum: 25 }
     validates :release_date
     validates :m1, length: { maximum: 30 }
   end
