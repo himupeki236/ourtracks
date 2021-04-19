@@ -79,6 +79,11 @@
   padding: 0;
 }
 
+.song {
+  height: 100%;
+  display: flex;
+}
+
 .idx {
   font-size: small;
 }
@@ -86,7 +91,7 @@
 .song_name {
   font-size: small;
   color: black;
-
+  height: 100%;
 }
 
 a:hover {
