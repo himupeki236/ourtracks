@@ -60,13 +60,32 @@
 
 .lists-left {
   display: flex;
-  min-width: 200px;
-
+  min-width: 100px;
 }
+
+.pull-lists {
+  display: flex;
+  min-width: 100px;
+  /* background-color: white; */
+  /* border: solid 1px; */
+  /* padding: 3px; */
+  
+}
+
+.pull-down-list {
+  background-color: white;
+}
+
+/* .years-lists {
+  display: flex;
+  min-width: 100px;
+  background-color: white;
+  margin: 0;
+}  */
 
 .category-list {
   text-decoration: none;
-  margin-right: 3vw;
+  margin-right: 6vw;
   color: #333333;
 }
 
@@ -105,4 +124,20 @@
 .sign-up {
   text-decoration: none;
   color: #333333;
+}
+
+.hidden {
+  display: none;
+}
+
+.show-lists {
+  /* background-color: black; */
+  color: black;
+  /* margin-right: 4vw; */
+  width: 100%;
+}
+
+#pull-year {
+  width: 130px;
+  margin-left: 165px;
 }

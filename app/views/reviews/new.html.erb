@@ -18,7 +18,7 @@
           レビュー
           <span class="indispensable">必須</span>
         </div>
-        <%= f.text_area :review, class:"items-text", id:"item-info", placeholder:"レビュー（必須 200文字から1,000文字まで）例 星野源/POP VIRUS）今や日本を代表するアーティストとなった星野源。 タイトルの「POP VIRUS」、CDショップ店員として、源さんのCDを手に取る人の広がりを目の当たりにしてきた。その広がり方はまさにウイルス的で源さんにぴったりのタイトルだ。多種多様の要素を織り交ぜた楽曲の数々。でも根元にはPOPSがあり、源さんが新たなPOPの在り方を提示してくれた。POP VIRUS 感染はまだまだ続いていく、そして源さんの音楽も繋がっていく。" ,rows:"30" %>
+        <%= f.text_area :review, class:"items-text", id:"item-info", placeholder:"レビュー（必須 200文字から1,000文字まで）例 星野源/POP VIRUS）今や日本を代表するアーティストとなった星野源。 タイトルの「POP VIRUS」、CDショップ店員として、源さんのCDを手に取る人の広がりを目の当たりにしてきた。その広がり方はまさにウイルス的で源さんにぴったりのタイトルだ。多種多様の要素を織り交ぜた楽曲の数々。でも根元にはPOPSがあり、源さんが新たなPOPの在り方を提示してくれた。POP VIRUS 感染はまだまだ続いていく、そして源さんの音楽も繋がっていく。" ,rows:"10" %>
       </div>
     </div>
     <%# /商品名と商品説明 %>
@@ -26,7 +26,7 @@
     <%# 下部ボタン %>
     <div class="sell-btn-contents">
       <%= f.submit "投稿する" ,class:"sell-btn" %>
-      <%=link_to 'もどる', root_path, class:"back-btn" %>
+      <%=link_to 'もどる', artist_work_reviews_path, class:"back-btn" %>
     </div>
     <%# /下部ボタン %>
   <% end %>

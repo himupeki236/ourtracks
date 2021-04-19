@@ -1,13 +1,13 @@
 <%= render "shared/header" %>
 <div class=wrapper>
-  <% if @asearch_artists.blank? %>
+  <% if @genres.blank? %>
     <div class='message-box'>
       <div class='message-data-nashi'>
         該当するデータがありません。
       </div>
     </div>
   <% end %>
-  <% @asearch_artists.each do |artist| %>
+  <% @genres.each do |artist| %>
   <div class=artist>
     <%= link_to image_tag(artist.image, class: "photo"), artist_works_path(artist.id) if artist.image.present? %>
       <div class=name>

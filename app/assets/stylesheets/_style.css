@@ -653,7 +653,7 @@ h6,
 body {
   line-height: 1.57;
   letter-spacing: 0.15em;
-  font-size: 30px;
+  /* font-size: 30px; */
   color: black;
   font-family: "Work Sans", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
   margin: 0;
@@ -984,7 +984,7 @@ div.contents.row .success h3 {
 
 form input,
 form textarea {
-  width: 100%;
+  /* width: 100%; */
   margin: 5px 0 15px;
   padding: 10px;
   border: 1px solid #D8D8D8;

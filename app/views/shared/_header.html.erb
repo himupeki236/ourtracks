@@ -1,7 +1,7 @@
 <%# CSS・・・assets/stylesheets/shared/header.css %>
 <header class='top-page-header'>
   <div class='search-bar-contents'>
-    <%= link_to image_tag("ourtracks_logo.png", class:"furima-icon"), "/" %>
+    <%= link_to image_tag("ourtracks_logo.png", class:"furima-icon"), artists_path %>
     <%# form class="search-form" action="#">%>
       <%#input class='input-box' placeholder='アーティストを検索'>%>
       <%#button class="search-button">%>
@@ -17,8 +17,9 @@
   </div>
   <div class='nav'>
     <ul class='lists-left'>
-      <li><%= link_to 'ジャンル', "#", class: "category-list" %></li>
-      <li><%= link_to '年代', "#", class: "brand-list" %></li>
+    <%# link_to 'ジャンル', class: "category-list", id: "genre_list" %>
+      <li class="category-list", id="genre_list"> ジャンル</li>
+      <li class="brand-list", id="year_list"> 年代</li>
     </ul>
     <ul class='lists-right'>
         <% if user_signed_in? %>
@@ -29,5 +30,37 @@
          <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
         <% end %>
     </ul>
+  </div>
+
+  <div class="nav">
+    <ul class="pull-lists">
+      <ul class="show-lists hidden" id="pull-genre">
+        <li class= "pull-down-list" id="pull-pop"><%= link_to 'Pop', genre_artists_path(genre: "Pop"), method: :get %></li>
+        <li class= "pull-down-list" id="pull-rock"><%= link_to 'Rock', genre_artists_path(genre: "Rock"), method: :get %></li>
+        <li class= "pull-down-list" id="pull-rb"><%= link_to 'R&B', genre_artists_path(genre: "R&B"), method: :get %></li>
+        <li class= "pull-down-list" id="pull-hiphop"><%= link_to 'HipHop', genre_artists_path(genre: "HipHop"), method: :get %></li>
+        <li class= "pull-down-list" id="pull-rap"><%= link_to 'Rap', genre_artists_path(genre: "Rap"), method: :get %></li>
+        <li class= "pull-down-list" id="pull-funk"><%= link_to 'Funk', genre_artists_path(genre: "Funk"), method: :get %></li>
+        <li class= "pull-down-list" id="pull-soul"><%= link_to 'Soul', genre_artists_path(genre: "Soul"), method: :get %></li>
+        <li class= "pull-down-list" id="pull-folk"><%= link_to 'Folk', genre_artists_path(genre: "Folk"), method: :get %></li>
+        <li class= "pull-down-list" id="pull-country"><%= link_to 'Country', genre_artists_path(genre: "Country"), method: :get %></li>
+        <li class= "pull-down-list" id="pull-electro"><%= link_to 'Electro', genre_artists_path(genre: "Electro"), method: :get %></li>
+        <li class= "pull-down-list" id="pull-edm"><%= link_to 'EDM', genre_artists_path(genre: "EDM"), method: :get %></li>
+        <li class= "pull-down-list" id="pull-v"><%= link_to 'ヴィジュアル系', genre_artists_path(genre: "ヴィジュアル系"), method: :get %></li>
+        <li class= "pull-down-list" id="pull-idol"><%= link_to 'アイドル', genre_artists_path(genre: "アイドル"), method: :get %></li>
+        <li class= "pull-down-list" id="pull-kayo"><%= link_to '歌謡曲', genre_artists_path(genre: "歌謡曲"), method: :get %></li>
+      </ul>
+      <ul class="show-lists hidden" id="pull-year">
+        <li class= "pull-down-list" id="pull-five"><%= link_to '1950s', year_artists_path(start_year: "1950", end_year: "1959"), method: :get %></li>
+        <li class= "pull-down-list" id="pull-six"><%= link_to '1960s', year_artists_path(start_year: "1960", end_year: "1969"), method: :get %></li>
+        <li class= "pull-down-list" id="pull-seven"><%= link_to '1970s', year_artists_path(start_year: "1970", end_year: "1979"), method: :get %></li>
+        <li class= "pull-down-list" id="pull-eight"><%= link_to '1980s', year_artists_path(start_year: "1980", end_year: "1989"), method: :get %></li>
+        <li class= "pull-down-list" id="pull-nine"><%= link_to '1990s', year_artists_path(start_year: "1990", end_year: "1999"), method: :get %></li>
+        <li class= "pull-down-list" id="pull-zero"><%= link_to '2000s', year_artists_path(start_year: "2000", end_year: "2009"), method: :get %></li>
+        <li class= "pull-down-list" id="pull-two-one"><%= link_to '2010s', year_artists_path(start_year: "2010", end_year: "2019"), method: :get %></li>
+        <li class= "pull-down-list" id="pull-two-two"><%= link_to '2020s', year_artists_path(start_year: "2020", end_year: "2029"), method: :get %></li>
+      </ul>
+    </ul>
+
   </div>
 </header>

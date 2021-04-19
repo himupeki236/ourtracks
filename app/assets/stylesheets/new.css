@@ -20,14 +20,15 @@
   background-color: #FFF;
   width: 70vw;
   min-width: 450px;
-  padding: 10vh 15vw;
+  padding: 10vh 10vw;
   margin: 0 auto;
 }
 
 .items-sell-title {
-  font-size: 22px;
+  font-size: 30px;
   font-weight: bold;
   text-align: center;
+  margin-bottom: 30px;
 }
 
 /* 共通 */
@@ -39,6 +40,11 @@
   color: #fff;
   font-size: 12px;
   font-weight: bold;
+}
+
+.biko_text {
+  font-size: 15px;
+  color: #aaa;
 }
 
 .weight-bold-text {
@@ -53,6 +59,7 @@
   background-color: #f5f5f5;
   padding-left: 20px;
 }
+
 
 .question {
   width: 20px;
@@ -82,13 +89,15 @@
 }
 
 .click-upload {
-  margin: 15px 0;
+  margin: 40px 0 -15px 0;
   min-width: 250px;
+  font-size: 15px;
+
 }
 
-.click-upload>p {
+/* .click-upload>p {
   margin-bottom: 15px;
-}
+} */
 
 /* /出品画像 */
 
@@ -99,11 +108,77 @@
 
 .items-text {
   width: 100%;
-  padding: 16px 16px 8px;
+  padding: 8px 16px;
   border-radius: 4px;
   border: 1px solid #ccc;
-  font-size: 16px;
+  /* font-size: 16px; */
   resize: none;
+}
+
+.work-name-text {
+  width: 100%;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  /* font-size: 16px; */
+  resize: none;
+  height: 50px;
+}
+
+.release-date-text {
+  width: 40%;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 20px;
+  resize: none;
+  height: 50px;
+}
+
+.activity-date-text {
+  width: 100%;
+  margin: 5px 0 16px 0;
+  /* border-radius: 4px; */
+  /* border: 1px solid #ccc; */
+  font-size: 20px;
+  
+  height: 50px;
+  /* background-color: #ea352d; */
+  /* justify-content: center; */
+  display: flex;
+  align-items: center;
+}
+
+.start-date-text {
+  width: 80px;
+  height: 100%;
+  resize: none;
+  /* background-color: aqua; */
+  border-radius: 4px; 
+  border: 1px solid #ccc;
+  padding: 8px 16px;
+  margin: 0;
+}
+
+.end-date-text {
+  width: 80px;
+  margin: 0 0 0 20px;
+  resize: none;
+  height: 100%;
+  /* background-color: green; */
+  border-radius: 4px; 
+  border: 1px solid #ccc;
+  padding: 8px 16px;
+}
+
+.field {
+  margin-bottom: 15px;
+}
+
+.between {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0 10px 0 5px;
 }
 
 .items-explain {

@@ -7,7 +7,38 @@ ja:
         nickname: ユーザー名
         email: Eメールアドレス
         password: パスワード
-
+      work:
+        photo: アルバム画像
+        name: アルバム名
+        release_no: リリースNo
+        release_date: リリース日
+        m1: 収録曲　M1
+        m2: 収録曲　M2
+        m3: 収録曲　M3
+        m4: 収録曲　M4
+        m5: 収録曲　M5
+        m6: 収録曲　M6
+        m7: 収録曲　M7
+        m8: 収録曲　M8
+        m9: 収録曲　M9
+        m10: 収録曲　M10
+        m11: 収録曲　M11
+        m12: 収録曲　M12
+        m13: 収録曲　M13
+        m14: 収録曲　M14
+        m15: 収録曲　M15
+        m16: 収録曲　M16
+        m17: 収録曲　M17
+        m18: 収録曲　M18
+        m19: 収録曲　M19
+        m20: 収録曲　M20
+      review:
+        title: タイトル
+        review: レビュー
+      artist:
+        image: アーティスト画像
+        artist_name: アーティスト名
+        artist_profile: プロフィール
   devise:
     confirmations:
       confirmed: メールアドレスが確認できました。

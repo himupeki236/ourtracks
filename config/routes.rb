@@ -3,9 +3,11 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   # resources :artists, only: :index
   root to: "artists#index"
-  resources :artists, only: [:index] do
+  resources :artists, only: [:index, :new, :create] do
     get :search, on: :collection
-    resources :works, only: [:index] do
+    get :genre, on: :collection
+    get :year, on: :collection
+    resources :works, only: [:index, :new, :create] do
       resources :reviews, only: [:index, :new, :create]
       
     end

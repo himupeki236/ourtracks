@@ -2,12 +2,17 @@
 <div class=wrapper>
     <% @artists.each do |artist| %>
     <div class=artist>
-      <%= link_to image_tag(artist.artist_image, class: "photo"), artist_works_path(artist.id) %>
+      <%= link_to image_tag(artist.image, class: "photo"), artist_works_path(artist.id) if artist.image.present? %>
         <div class=name>
         <p class=text_name><%= artist.artist_name %></p>
-      </div>  
+      </div>
     </div>
-    <% end %>  
+    <% end %>
 </div>
+
+<%= link_to(new_artist_path, class: 'purchase-btn') do %>
+<span class='purchase-btn-text'>登録する</span>
+<%= image_tag 'icon_camera.png' , size: '185x50' ,class: "purchase-btn-icon" %>
+<% end %>
 <%= render "shared/footer" %>
    

@@ -1,0 +1,140 @@
+<%= render "shared/header" %>
+
+  <div class="items-sell-main">
+    <h2 class="items-sell-title">アルバム登録</h2>
+    <%= form_with model: [@artist, @work], local: true do |f| %>
+
+    <%= render 'shared/error_messages', model: f.object %>
+
+    <%# 出品画像 %>
+    <div class="img-upload">
+      <div class="weight-bold-text">
+        アルバム画像
+        <span class="indispensable">必須</span>
+      </div>
+      <div class="click-upload">
+        <p>
+          クリックしてファイルをアップロード
+        </p>
+        <%= f.file_field :photo, id:"item-image" %>
+      </div>
+    </div>
+    <%# /出品画像 %>
+    <%# 商品名と商品説明 %>
+    <div class="new-items">
+      <div class="weight-bold-text">
+        アルバム名
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :name, class:"work-name-text", id:"item-name", placeholder:"アルバム名  （必須 30文字まで)" %>
+      <div class="weight-bold-text">
+        リリースNo
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :release_no, class:"work-name-text", id:"item-name", placeholder:"例) メジャー 1st Full Album （必須 30文字まで)" %>
+      <div class="weight-bold-text">
+        リリース日
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.date_field :release_date, class:"release-date-text ", id:"item-name", placeholder:"アーティスト名（必須 30文字まで)" %>
+      <div class="weight-bold-text">
+        収録曲　M1
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :m1, class:"work-name-text", id:"item-name", placeholder:"曲名（必須 30文字まで)" %>
+      <div class="weight-bold-text">
+        収録曲　M2
+      </div>
+      <%= f.text_area :m2, class:"work-name-text", id:"item-name", placeholder:"曲名（必須 30文字まで)" %>
+      <div class="weight-bold-text">
+        収録曲　M3
+      </div>
+      <%= f.text_area :m3, class:"work-name-text", id:"item-name", placeholder:"曲名 （必須 30文字まで)" %>
+      <div class="weight-bold-text">
+        収録曲　M4
+      </div>
+      <%= f.text_area :m4, class:"work-name-text", id:"item-name", placeholder:"曲名 （必須 30文字まで)" %>
+      <div class="weight-bold-text">
+        収録曲　M5
+      </div>
+      <%= f.text_area :m5, class:"work-name-text", id:"item-name", placeholder:"曲名 （必須 30文字まで)" %>
+      <div class="weight-bold-text">
+        収録曲　M6
+      </div>
+      <%= f.text_area :m6, class:"work-name-text", id:"item-name", placeholder:"曲名 （必須 30文字まで)" %>
+      <div class="weight-bold-text">
+        収録曲　M7
+      </div>
+      <%= f.text_area :m7, class:"work-name-text", id:"item-name", placeholder:"曲名 （必須 30文字まで)" %>
+      <div class="weight-bold-text">
+        収録曲　M8
+      </div>
+      <%= f.text_area :m8, class:"work-name-text", id:"item-name", placeholder:"曲名 （必須 30文字まで)" %>
+      <div class="weight-bold-text">
+        収録曲　M9
+      </div>
+      <%= f.text_area :m9, class:"work-name-text", id:"item-name", placeholder:"曲名 （必須 30文字まで)" %>
+      <div class="weight-bold-text">
+        収録曲　M10
+      </div>
+      <%= f.text_area :m10, class:"work-name-text", id:"item-name", placeholder:"曲名 （必須 30文字まで)" %>
+      <div class="weight-bold-text">
+        収録曲　M11
+      </div>
+      <%= f.text_area :m11, class:"work-name-text", id:"item-name", placeholder:"曲名 （必須 30文字まで)" %>
+      <div class="weight-bold-text">
+        収録曲　M12
+      </div>
+      <%= f.text_area :m12, class:"work-name-text", id:"item-name", placeholder:"曲名 （必須 30文字まで)" %>
+      <div class="weight-bold-text">
+        収録曲　M13
+      </div>
+      <%= f.text_area :m13, class:"work-name-text", id:"item-name", placeholder:"曲名 （必須 30文字まで)" %>
+      <div class="weight-bold-text">
+        収録曲　M14
+      </div>
+      <%= f.text_area :m14, class:"work-name-text", id:"item-name", placeholder:"曲名 （必須 30文字まで)" %>
+      <div class="weight-bold-text">
+        収録曲　M15
+      </div>
+      <%= f.text_area :m15, class:"work-name-text", id:"item-name", placeholder:"曲名 （必須 30文字まで)" %>
+      <div class="weight-bold-text">
+        収録曲　M16
+      </div>
+      <%= f.text_area :m16, class:"work-name-text", id:"item-name", placeholder:"曲名 （必須 30文字まで)" %>
+      <div class="weight-bold-text">
+        収録曲　M17
+      </div>
+      <%= f.text_area :m17, class:"work-name-text", id:"item-name", placeholder:"曲名 （必須 30文字まで)" %>
+      <div class="weight-bold-text">
+        収録曲　M18
+      </div>
+      <%= f.text_area :m18, class:"work-name-text", id:"item-name", placeholder:"曲名 （必須 30文字まで)" %>
+      <div class="weight-bold-text">
+        収録曲　M19
+      </div>
+      <%= f.text_area :m19, class:"work-name-text", id:"item-name", placeholder:"曲名  （必須 30文字まで)" %>
+      <div class="weight-bold-text">
+        収録曲　M20
+      </div>
+      <%= f.text_area :m20, class:"work-name-text", id:"item-name", placeholder:"曲名 （必須 30文字まで)" %>
+    </div>
+
+    <%# /商品名と商品説明 %>
+
+    <%# 商品の詳細 %>
+
+    <%# /商品の詳細 %>
+
+
+    <%# 下部ボタン %>
+    <div class="sell-btn-contents">
+      <%= f.submit "登録" ,class:"sell-btn" %>
+      <%=link_to 'もどる', artist_works_path, class:"back-btn" %>
+    </div>
+    <%# /下部ボタン %>
+  </div>
+  <% end %>
+
+<%= render "shared/footer" %>
+
