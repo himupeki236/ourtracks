@@ -37,8 +37,11 @@ ja:
         review: レビュー
       artist:
         image: アーティスト画像
-        artist_name: アーティスト名
-        artist_profile: プロフィール
+        name: アーティスト名
+        profile: プロフィール
+        genre: ジャンル
+        start_year: 活動開始年
+        end_year: 活動終了年
   devise:
     confirmations:
       confirmed: メールアドレスが確認できました。
