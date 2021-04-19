@@ -4,8 +4,8 @@ class ArtistsController < ApplicationController
   end
 
   def search
-    if params[:artist_name].present?
-      @asearch_artists = Artist.where('artist_name LIKE ?', "%#{params[:artist_name]}%")
+    if params[:name].present?
+      @asearch_artists = Artist.where('name LIKE ?', "%#{params[:name]}%")
     else
       @asearch_artists = Artist.none
     end
@@ -51,7 +51,7 @@ class ArtistsController < ApplicationController
   private
 
   def artist_params
-    params.require(:artist).permit(:image, :artist_name, :artist_profile, :start_year, :end_year, genre:[])
+    params.require(:artist).permit(:image, :name, :profile, :start_year, :end_year, genre:[])
   end
 
 end

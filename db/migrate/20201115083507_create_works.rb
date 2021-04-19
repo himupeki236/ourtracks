@@ -2,9 +2,8 @@ class CreateWorks < ActiveRecord::Migration[6.0]
   def change
     create_table :works do |t|
       t.string :name
-      t.string :image
       t.string :release_no
-      t.string :release_date
+      t.date :release_date
       t.string :m1
       t.string :m2
       t.string :m3
@@ -26,7 +25,7 @@ class CreateWorks < ActiveRecord::Migration[6.0]
       t.string :m19
       t.string :m20
       t.text :gaiyo
-      t.integer :artist_id
+      t.references :artist,          null: false
       t.timestamps
     end
   end

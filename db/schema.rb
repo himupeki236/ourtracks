@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_19_013928) do
+ActiveRecord::Schema.define(version: 2021_04_14_220126) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -34,18 +34,14 @@ ActiveRecord::Schema.define(version: 2021_04_19_013928) do
   end
 
   create_table "artists", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "artist_name"
-    t.text "artist_image"
-    t.string "artist_profile"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.string "genre"
-    t.date "activities_start"
-    t.date "activities_end"
-    t.boolean "checkbox"
-    t.text "genres"
+    t.string "name"
+    t.string "name_kana"
+    t.text "profile"
+    t.text "genre"
     t.integer "start_year"
     t.integer "end_year"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "reviews", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -77,7 +73,6 @@ ActiveRecord::Schema.define(version: 2021_04_19_013928) do
 
   create_table "works", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
-    t.string "image"
     t.string "release_no"
     t.date "release_date"
     t.string "m1"
@@ -101,9 +96,10 @@ ActiveRecord::Schema.define(version: 2021_04_19_013928) do
     t.string "m19"
     t.string "m20"
     t.text "gaiyo"
-    t.integer "artist_id"
+    t.bigint "artist_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["artist_id"], name: "index_works_on_artist_id"
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"

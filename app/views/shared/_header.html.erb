@@ -1,7 +1,7 @@
 <%# CSS・・・assets/stylesheets/shared/header.css %>
 <header class='top-page-header'>
   <div class='search-bar-contents'>
-    <%= link_to image_tag("ourtracks_logo.png", class:"furima-icon"), artists_path %>
+    <%= link_to image_tag("ourtracks_logo.png", class:"furima-icon"), root_path %>
     <%# form class="search-form" action="#">%>
       <%#input class='input-box' placeholder='アーティストを検索'>%>
       <%#button class="search-button">%>
@@ -10,7 +10,7 @@
     <%#/form>%>
     <%= form_with url: search_artists_path, method: :get, local: true do |f| %>
     <div class="search-form">
-      <%= f.text_field :artist_name, class: 'input-box', placeholder: 'アーティストを検索' %>
+      <%= f.text_field :name, class: 'input-box', placeholder: 'アーティストを検索' %>
       <%= f.submit :検索, class: "search-icon" %>
     </div>  
     <% end %>
