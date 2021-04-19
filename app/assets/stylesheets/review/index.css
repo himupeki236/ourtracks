@@ -74,6 +74,10 @@
     /* background-color: lightgreen; */
 }
 
+.song_list {
+  list-style: none;
+}
+
 .idx {
   font-size: small;
 }
