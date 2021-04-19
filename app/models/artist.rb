@@ -8,5 +8,6 @@ class Artist < ApplicationRecord
     validates :start_year, numericality: { only_integer: true }, length: { is: 4 }
   end
   validates :profile,  length: { maximum: 1000 }
-  validates :end_year, numericality: { only_integer: true }, length: { is: 4 }
+  # 空文字を許可
+  validates :end_year, numericality: { only_integer: true }, length: { is: 4 }, allow_blank: true
 end
