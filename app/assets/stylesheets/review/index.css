@@ -92,10 +92,7 @@
   font-size: small;
   color: black;
   height: 100%;
-}
-
-a:hover {
-  color: black;
+  margin-left: 10px;
 }
 
 .review_box {

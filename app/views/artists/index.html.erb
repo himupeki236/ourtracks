@@ -3,8 +3,10 @@
     <% @artists.each do |artist| %>
     <div class=artist>
       <%= link_to image_tag(artist.image, class: "photo"), artist_works_path(artist.id) if artist.image.present? %>
-        <div class=name>
-        <p class=text_name><%= artist.name %></p>
+      <div class=name>
+        <p class=text_name>
+          <%= link_to artist.name, edit_artist_path(artist.id) %>
+        </p>
       </div>
     </div>
     <% end %>

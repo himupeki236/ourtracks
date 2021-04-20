@@ -1,6 +1,10 @@
 class ArtistsController < ApplicationController
+
+  before_action :set_index_params, only: [:index]
+  before_action :set_edit_params, only: [:edit, :update]
+
   def index
-    @artists = Artist.all
+    
   end
 
   def search
@@ -48,10 +52,32 @@ class ArtistsController < ApplicationController
     end
   end
 
+  def edit
+    
+  end
+
+  def update
+    if @artist.update(artist_params)
+      # binding.pry
+      redirect_to action: :index
+      # できなければeditに遷移
+    else
+      render action: :edit
+    end
+  end
+
   private
 
   def artist_params
     params.require(:artist).permit(:image, :name, :profile, :start_year, :end_year, genre:[])
+  end
+
+  def set_index_params
+    @artists = Artist.all
+  end
+
+  def set_edit_params
+    @artist = Artist.find(params[:id])
   end
 
 end

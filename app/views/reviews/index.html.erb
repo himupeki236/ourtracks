@@ -21,133 +21,114 @@
           <% end %>
           <a class="song_name"><%= @work.m1 %></a>
         </li>
-
         <li class="song">
           <% unless @work.m2.blank? then %>
             <span class=idx>M02.</span>
           <% end %>
           <a class="song_name"><%= @work.m2 %></a>
         </li>
-
         <li class="song">
           <% unless @work.m3.blank? then %>
             <span class=idx>M03.</span>
           <% end %>
           <a class="song_name"><%= @work.m3 %></a>
         </li>
-
         <li class="song">
           <% unless @work.m4.blank? then %>
             <span class=idx>M04.</span>
           <% end %>
           <a class="song_name"><%= @work.m4 %></a>
         </li>
-
         <li class="song">
           <% unless @work.m5.blank? then %>
             <span class=idx>M05.</span>
           <% end %>
           <a class="song_name"><%= @work.m5 %></a>
         </li>
-
         <li class="song">
           <% unless @work.m6.blank? then %>
             <span class=idx>M06.</span>
           <% end %>
           <a class="song_name"><%= @work.m6 %></a>
         </li>
-
         <li class="song">
           <% unless @work.m7.blank? then %>
             <span class=idx>M07.</span>
           <% end %>
           <a class="song_name"><%= @work.m7 %></a>
         </li>
-
         <li class="song">
           <% unless @work.m8.blank? then %>
             <span class=idx>M08.</span>
           <% end %>
           <a class="song_name"><%= @work.m8 %></a>
         </li>
-
         <li class="song">
           <% unless @work.m9.blank? then %>
             <span class=idx>M09.</span>
           <% end %>
           <a class="song_name"><%= @work.m9 %></a>
         </li>
-
         <li class="song">
           <% unless @work.m10.blank? then %>
             <span class=idx>M10.</span>
           <% end %>
           <a class="song_name"><%= @work.m10 %></a>
         </li>
-
         <li class="song">
           <% unless @work.m11.blank? then %>
             <span class=idx>M11.</span>
           <% end %>
           <a class="song_name"><%= @work.m11 %></a>
         </li>
-
         <li class="song">
           <% unless @work.m12.blank? then %>
             <span class=idx>M12.</span>
           <% end %>
           <a class="song_name"><%= @work.m12 %></a>
         </li>
-
         <li class="song">
           <% unless @work.m13.blank? then %>
             <span class=idx>M13.</span>
           <% end %>
           <a class="song_name"><%= @work.m13 %></a>
         </li>
-
         <li class="song">
           <% unless @work.m14.blank? then %>
             <span class=idx>M14.</span>
           <% end %>
           <a class="song_name"><%= @work.m14 %></a>
         </li>
-
         <li class="song">
           <% unless @work.m15.blank? then %>
             <span class=idx>M15.</span>
           <% end %>
           <a class="song_name"><%= @work.m15 %></a>
         </li>
-
         <li class="song">
           <% unless @work.m16.blank? then %>
             <span class=idx>M16.</span>
           <% end %>
           <a class="song_name"><%= @work.m16 %></a>
         </li>
-
         <li class="song">
           <% unless @work.m17.blank? then %>
             <span class=idx>M17.</span>
           <% end %>
           <a class="song_name"><%= @work.m17 %></a>
         </li>
-
         <li class="song">
           <% unless @work.m18.blank? then %>
             <span class=idx>M18.</span>
           <% end %>
           <a class="song_name"><%= @work.m18 %></a>
         </li>
-
         <li class="song">
           <% unless @work.m19.blank? then %>
             <span class=idx>M19.</span>
           <% end %>
           <a class="song_name"><%= @work.m19 %></a>
         </li>
-
         <li class="song">
           <% unless @work.m20.blank? then %>
             <span class=idx>M20.</span>
@@ -163,15 +144,19 @@
   <% @reviews.each do |review| %>
     <div class="review_box">
       <div class="review_title_box">
-        <%= review.title %>
-      </div>  
+        <% if user_signed_in? && review.user.id == current_user.id %>
+          <%= link_to review.title, edit_artist_work_review_path(@artist, @work, review.id) %>
+        <% else %>
+          <%= review.title %>
+        <% end %>
+      </div>
       <div class="review_text_box">
-      <%=safe_join(review.review.split("\n"),tag(:br))%>
+        <%= safe_join(review.review.split("\n"),tag(:br)) %>
       <%# review.review %>
-      </div> 
+      </div>
       <div class="review_user_box">
         投稿者：<%= review.user.nickname %>
-      </div>  
+      </div>
     </div>
   <% end %>
   </div>

@@ -1,6 +1,7 @@
 class WorksController < ApplicationController
   # アーティストidを取得
   before_action :set_params, only: [:index, :new, :create]
+  before_action :set_edit_params, only: [:edit, :update]
 
   def index
     @works = Work.where("artist_id = ?", params[:artist_id]).all.order(release_date: "DESC")
@@ -15,13 +16,25 @@ class WorksController < ApplicationController
     @work = Work.new(work_params)  
     # binding.pry
     # もし保存ができたらindexに遷移
-    
     if @work.save
       redirect_to action: :index
     # できなければnewに遷移
     else
-      
       render action: :new
+    end
+  end
+
+  def edit
+
+  end
+
+  def update
+    if @work.update(work_params)
+      # binding.pry
+      redirect_to action: :index
+      # できなければeditに遷移
+    else
+      render action: :edit
     end
   end
 
@@ -32,8 +45,14 @@ class WorksController < ApplicationController
   end
 
   def set_params
-    @artist_id = params[:artist_id]
+    # @artist_id = params[:artist_id]
     @artist = Artist.find(params[:artist_id])
+  end
+
+  def set_edit_params
+    # @work = Work.where('artist_id = ? and id = ?', params[:artist_id], params[:id])
+    @artist = Artist.find(params[:artist_id])
+    @work = Work.find(params[:id])
   end
 
 

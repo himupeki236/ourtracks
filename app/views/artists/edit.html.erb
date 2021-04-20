@@ -1,0 +1,78 @@
+<%= render "shared/header" %>
+
+  <div class="items-sell-main">
+    <h2 class="items-sell-title">アーティスト更新</h2>
+    <%= form_with model: @artist, local: true do |f| %>
+
+    <%= render 'shared/error_messages', model: f.object %>
+
+    <%# 出品画像 %>
+    <div class="img-upload">
+      <div class="weight-bold-text">
+        アーティスト画像
+        <span class="indispensable">必須</span>
+      </div>
+      <div class="click-upload">
+        <p>
+          クリックしてファイルをアップロード
+        </p>
+        <%= f.file_field :image, id:"item-image" %>
+      </div>
+    </div>
+    <%# /出品画像 %>
+    <%# 商品名と商品説明 %>
+    <div class="new-items">
+      <div class="weight-bold-text">
+        アーティスト名
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :name, class:"work-name-text", id:"item-name", placeholder:"アーティスト名（必須 30文字まで)" %>
+      <div class="items-explain">
+        <div class="weight-bold-text">
+          プロフィール
+        </div>
+        <%= f.text_area :profile, class:"items-text", id:"item-info", placeholder:"プロフィール（必須 1,000文字まで）" ,rows:"10" %>
+      </div>
+      <div class="weight-bold-text">
+        ジャンル
+        <span class="indispensable">必須</span>
+        <span class="biko_text">複数選択可</span>
+      </div>
+      <div class="field">
+        <% %w(Pop Rock R&B HipHop Country Electro Rap Funk Soul EDM Folk ヴィジュアル系 アイドル 歌謡曲).each.with_index do |genre,i| %>
+        <label>
+          <%= f.check_box :genre, {multiple: true}, genre, nil %>
+          <%= genre %>
+          <label>
+        <% end %>
+      </div>
+      <div class="weight-bold-text">
+        活動期間
+        <span class="indispensable">必須</span>
+        <span class="biko_text">活動開始年のみ必須</span>
+      </div>
+      <div class="activity-date-text">
+        <%= f.text_area :start_year, class:"start-date-text", id:"item-name", placeholder:"1992" %>
+        <span class="between">年　〜</span>
+        <%= f.text_area :end_year, class:"end-date-text", id:"item-name", placeholder:"2000" %>
+        <span class="between">年</span>
+      </div>
+    </div>
+    <%# /商品名と商品説明 %>
+
+    <%# 商品の詳細 %>
+
+    <%# /商品の詳細 %>
+
+
+    <%# 下部ボタン %>
+    <div class="sell-btn-contents">
+      <%= f.submit "更新" ,class:"sell-btn" %>
+      <%=link_to 'もどる', root_path, class:"back-btn" %>
+    </div>
+    <%# /下部ボタン %>
+  </div>
+  <% end %>
+
+<%= render "shared/footer" %>
+

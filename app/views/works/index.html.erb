@@ -1,16 +1,16 @@
 <%= render "shared/header" %>
 <div class=wrapper>
-    <% @works.each do |work| %>
-    <div class=work_box>
-      <%= link_to image_tag(work.photo, class: "work_photo"), artist_work_reviews_path(@artist, work.id) if work.photo.present? %>
-      <div class=release_no_box>
-        <p class=release_no><%= work.release_no %></p>
-      </div>
-      <div class=work_name_box>
-        <p class=work_name><%= work.name %></p>
-      </div>  
+  <% @works.each do |work| %>
+  <div class=work_box>
+    <%= link_to image_tag(work.photo, class: "work_photo"), artist_work_reviews_path(@artist, work.id) if work.photo.present? %>
+    <div class=release_no_box>
+      <p class=release_no><%= work.release_no %></p>
     </div>
-  <% end %>  
+    <div class=work_name_box>
+      <p class=work_name><%= link_to work.name, edit_artist_work_path(@artist, work.id) %></p>
+    </div>
+  </div>
+  <% end %>
 </div>
 <%= link_to(new_artist_work_path, class: 'purchase-btn') do %>
 <span class='purchase-btn-text'>登録する</span>

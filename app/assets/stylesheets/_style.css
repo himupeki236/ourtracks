@@ -67,27 +67,42 @@ body {
   margin: 0;
 }
 
+a,
+a:hover,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* a:hover {
+  text-decoration: none;
+  color: inherit;
+} */
 /* ==========================================================================
  * Links
  * ========================================================================== */
 /*
  * Remove the gray background color from active links in IE 10. */
-a {
+/* a {
   background: transparent;
-}
+  color: inherit;
+} */
 
 /*
  * Address `outline` inconsistency between Chrome and other browsers. */
-a:focus {
+/* a:focus {
   outline: thin dotted;
-}
+  color: inherit;
+} */
 
 /*
  * Improve readability when focused and also mouse hovered in all browsers. */
-a:active,
+/* a:active,
 a:hover {
   outline: 0;
-}
+  color: inherit;
+} */
 
 /* ==========================================================================
  * Typography
@@ -659,14 +674,9 @@ body {
   margin: 0;
 }
 
-a {
-  text-decoration: none;
-  color: #666;
-}
-
-a:hover {
+/* a:hover {
   color: #57C3E9;
-}
+} */
 
 .bold {
   font-weight: bold;
@@ -929,10 +939,12 @@ div.contents.row div.content_post .more ul.more_list li a {
   padding: 5px;
 }
 
-div.contents.row div.content_post .more ul.more_list li a:hover {
+div.contents.row div.content_post .more ul.more_list li {
   background-color: #57C3E9;
-  color: #fff;
+  color : inherit;
 }
+
+
 
 div.contents.row div.content_post p {
   position: absolute;
@@ -959,9 +971,9 @@ div.contents.row div.content_post span.name a {
   color: #aaa;
 }
 
-div.contents.row div.content_post span.name a:hover {
+div.contents.row div.content_post span.name {
   text-decoration: underline;
-  color: #aaa;
+  color : inherit;
 }
 
 div.contents.row div.content_post span.name span {
@@ -1025,13 +1037,13 @@ form input[type="submit"]:hover {
   margin-top: 15px;
 }
 
-.comments a {
+/* .comments a {
   color: #57C3E9;
 }
 
 .comments a:hover {
   text-decoration: underline;
-}
+} */
 
 footer {
   margin: 30px auto;
