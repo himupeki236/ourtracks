@@ -144,6 +144,7 @@
   <% @reviews.each do |review| %>
     <div class="review_box">
       <div class="review_title_box">
+        <%# ログインユーザーかつログインユーザーが投稿者と一致する場合編集画面に遷移 %>
         <% if user_signed_in? && review.user.id == current_user.id %>
           <%= link_to review.title, edit_artist_work_review_path(@artist, @work, review.id) %>
         <% else %>
@@ -152,7 +153,7 @@
       </div>
       <div class="review_text_box">
         <%= safe_join(review.review.split("\n"),tag(:br)) %>
-      <%# review.review %>
+      
       </div>
       <div class="review_user_box">
         投稿者：<%= review.user.nickname %>
