@@ -92,11 +92,11 @@
 https://ourtracks.herokuapp.com/
 
 ## Basic認証のIDとパスワード
-admin
+admin  
 2222
 
 ## 管理者権限（登録・編集可能なユーザー）のメールアドレスとパスワード
-uu@gmail.com
+uu@gmail.com  
 123456q
 
 
