@@ -88,7 +88,7 @@
 
 # 挙動確認用データ
 
-## 自身のフリマアプリのURL
+## 自身の音楽レビューアプリのURL
 https://ourtracks.herokuapp.com/
 
 ## Basic認証のIDとパスワード
