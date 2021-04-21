@@ -1,5 +1,5 @@
 class Artist < ApplicationRecord
-  has_many :work
+  has_many :works
   has_one_attached :image
   with_options presence: true do
     validates :image

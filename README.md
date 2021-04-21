@@ -29,7 +29,7 @@
 
 ### Association
 
-- has_many :work
+- has_many :works
 - has_one_attached :image
 
 
