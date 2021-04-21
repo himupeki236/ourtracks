@@ -1,6 +1,6 @@
 class Work < ApplicationRecord
   belongs_to :artist
-  has_many :review
+  has_many :reviews
   has_one_attached :photo
 
   with_options presence: true do
