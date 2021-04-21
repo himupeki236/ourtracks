@@ -5,7 +5,12 @@
       <%= link_to image_tag(artist.image, class: "photo"), artist_works_path(artist.id) if artist.image.present? %>
       <div class=name>
         <p class=text_name>
+        <%# ログインユーザーかつログインユーザーが管理者の場合に登録画面へ遷移 %>
+        <% if user_signed_in? && 14 == current_user.id %>
           <%= link_to artist.name, edit_artist_path(artist.id) %>
+        <% else %>
+          <%= artist.name %>
+        <% end %>
         </p>
       </div>
     </div>

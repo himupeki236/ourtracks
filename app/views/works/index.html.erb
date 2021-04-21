@@ -7,12 +7,19 @@
       <p class=release_no><%= work.release_no %></p>
     </div>
     <div class=work_name_box>
-      <p class=work_name><%= link_to work.name, edit_artist_work_path(@artist, work.id) %></p>
+      <p class=work_name>
+        <%# ログインユーザーかつログインユーザーが管理者の場合に登録画面へ遷移 %>
+        <% if user_signed_in? && 14 == current_user.id %>
+          <%= link_to work.name, edit_artist_work_path(@artist, work.id) %>
+        <% else %>
+          <%= work.name %>
+        <% end %>
+      </p>
     </div>
   </div>
   <% end %>
 </div>
-<%# ログインユーザーかつログインユーザーが管理者の場合に投稿画面へ遷移 %>
+<%# ログインユーザーかつログインユーザーが管理者の場合に登録画面へ遷移 %>
 <% if user_signed_in? && 14 == current_user.id %>
   <%= link_to(new_artist_work_path, class: 'purchase-btn') do %>
   <span class='purchase-btn-text'>登録する</span>
