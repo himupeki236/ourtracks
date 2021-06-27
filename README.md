@@ -3,6 +3,9 @@
 # 概要
 ユーザーがアーティストのアルバムごとにレビュー投稿、閲覧できるリスナー型音楽レビューアプリ
 
+## URL
+https://ourtracks.herokuapp.com/
+
 ## アーティスト画面（ホーム画面）
 ![ourtracks herokuapp com_](https://user-images.githubusercontent.com/73057075/123547878-78b69100-d79d-11eb-9fad-ad7b6d6409ae.png)
 
@@ -29,9 +32,6 @@
 | ジャンル検索機能 | 該当ジャンルのアーティスト検索が可能 |
 
 # 挙動確認用データ
-
-## 自身の音楽レビューアプリのURL
-https://ourtracks.herokuapp.com/
 
 ## Basic認証のIDとパスワード
 admin  
