@@ -1,5 +1,3 @@
-# README
-
 # OurTracks
 リスナー型音楽レビュー投稿アプリ
 
