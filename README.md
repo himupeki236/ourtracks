@@ -1,6 +1,12 @@
 # README
 
-# ホーム画面
+# ホーム画面（アーティスト画面）
+![ourtracks herokuapp com_](https://user-images.githubusercontent.com/73057075/123547878-78b69100-d79d-11eb-9fad-ad7b6d6409ae.png)
+
+# ディスコグラフィー画面
+![ourtracks herokuapp com_artists_4_works (2)](https://user-images.githubusercontent.com/73057075/123548344-5c1b5880-d79f-11eb-8a3f-3726d315d438.png)
+
+# レビュー画面
 ![ourtracks herokuapp com_artists_4_works_124_reviews](https://user-images.githubusercontent.com/73057075/123547400-9a167d80-d79b-11eb-8e9b-80ff7f221497.png)
 
 
